@@ -1,0 +1,102 @@
+<!-- start backup bodu  -->
+<!-- <body  *ngFor="let item of info"> -->
+<!-- end backup bodu  -->
+
+<!-- start back up  -->
+
+<form class="form-signin form" [formGroup]="klloydForm" (ngSubmit)="onSubmit($event)">
+  <div formArrayName="contactsArray" *ngFor="let contact of contacts.controls; let i = index">
+    <div [formGroupName]="i">
+      <div class="form-label-group">
+        <input type="email" id="inputName" class="form-control" placeholder="Name" formControlName="name" autofocus #name>
+        <label for="inputName">Name</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email"
+          autofocus #email>
+        <label for="inputEmail">Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputPhone" class="form-control" placeholder="phone" formControlName="phone" #phone>
+        <label for="inputPhone">Phone</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputCountry" class="form-control" placeholder="country" formControlName="country"
+          #country>
+        <label for="inputCountry">Country</label>
+      </div>
+    </div>  
+    <!-- end backup  -->
+
+
+
+    <!-- d. with the      output named onSave, which  have a type EventEmitter<Contact> I have
+        Bind the onSave event to the single button  submit and  the button ii clicked, the event is fired with the content of the form. with (click)="onSubmit(name.value, email.value, phone.value, country.value)" click event -->
+
+
+    <!-- start backup up submit button  -->
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!klloydForm.valid"
+      (click)="onSubmit($event)">Submit</button>
+    <!-- start backup up submit button  -->
+
+
+
+    <!--  e. the button on the form is enabled only when all of the fields in the form are
+        provided and valid. - with [disabled]="!klloydForm.valid" -> -->
+
+  </div>
+  <!-- start backup up form  -->
+  <!-- </form> -->
+  <!-- end backup up form  -->
+
+  <!-- start backup up body  -->
+  <!-- </body> -->
+  <!-- start backup up body  -->
+
+
+
+
+
+
+
+
+
+  <!-- <form [formGroup]="klloydForm" (ngSubmit)="onSubmit($event)">
+
+    <div formArrayName="contactsArray" *ngFor="let contact of contacts.controls; let i = index">
+      <div [formGroupName]="i">
+
+        <div>
+          <label for="inputName">Name: </label>
+          <input type="email" placeholder="Name" formControlName="name" autofocus>
+        </div>
+
+        <div>
+          <label for="inputEmail">Email address: </label>
+          <input type="email" placeholder="Email address" formControlName="email">
+        </div>
+
+        <div>
+          <label for="inputPhone">Phone: </label>
+          <input type="text" placeholder="phone" formControlName="phone">
+        </div>
+
+        <div>
+          <label for="inputCountry">Country: </label>
+          <input type="text" placeholder="country" formControlName="country">
+        </div>
+        <br />
+
+      </div>
+
+    </div>
+
+    <button type="button" class=" btn btn-primary" (click)="addNewContact()">Add New Contact</button>
+
+  </form> -->
+
+  <br />
+  <!-- {{klloydForm.value | json}} -->
