@@ -10,7 +10,6 @@ import { Contact } from '../model';
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent implements OnInit {
-  // info:  { name: string; email: string; phone: string; country: string; }[];
   info:  any;
   klloydForm: FormGroup;
   @Input() btnText: any;
@@ -40,7 +39,8 @@ export class ContactFormComponent implements OnInit {
   }
 
 
-  // backup ngOnInIt 
+  // Task Two   -  Im using  invoke the form you created in task one .
+  //at the end of the day i get all
 
   // ngOnInit() {
   //     this.klloydForm = this.fb.group({
@@ -52,8 +52,6 @@ export class ContactFormComponent implements OnInit {
 
   //   this.info= this.contactInfo.information;
   //   // this.info.push(this.contactInfo.information);
-
-
   // }
 
   // back up onSubmit 

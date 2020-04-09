@@ -101,6 +101,13 @@ body {
   }
 }
 
-.form {
-    margin-top: 30px;
+/* .form {
+    margin-top: 80px;
+    
+} */
+
+.btn {
+  margin-top: 40px;
+    margin-bottom: 30px;
 }
+
